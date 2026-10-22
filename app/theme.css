@@ -1,0 +1,45 @@
+:root {
+  --radius: 14px;
+
+  /* Theme tokens (edit these to re-skin; components never use raw colors). */
+  --bg: 0 0% 100%;
+  --fg: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-fg: 215 16% 47%;
+  --card: 0 0% 100%;
+  --card-fg: 222 47% 11%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  --primary: 221 83% 53%;
+  --primary-fg: 210 40% 98%;
+  --accent: 212 100% 97%;
+  --accent-fg: 222 47% 11%;
+  --danger: 0 84% 60%;
+  --danger-fg: 210 40% 98%;
+}
+
+:root[data-theme="dark"] {
+  --bg: 222 47% 7%;
+  --fg: 210 40% 98%;
+  --muted: 217 33% 15%;
+  --muted-fg: 215 20% 70%;
+  --card: 222 47% 9%;
+  --card-fg: 210 40% 98%;
+  --border: 217 33% 18%;
+  --input: 217 33% 18%;
+  --ring: 217 91% 60%;
+  --primary: 217 91% 60%;
+  --primary-fg: 222 47% 7%;
+  --accent: 217 33% 14%;
+  --accent-fg: 210 40% 98%;
+  --danger: 0 84% 60%;
+  --danger-fg: 222 47% 7%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+

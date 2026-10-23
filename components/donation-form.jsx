@@ -12,6 +12,7 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import { Input, Label, Select } from "@/components/ui/field";
+import { apiUrl } from "@/lib/api";
 import { coordsForLocationId, LOCATION_OPTIONS } from "@/lib/locations";
 import { NGOS } from "@/lib/mock-data";
 import { matchNgOs } from "@/components/matching";
@@ -48,7 +49,7 @@ export function DonationForm() {
   async function onSubmit(values) {
     setSubmitError("");
     try {
-      const response = await fetch("/api/donations", {
+      const response = await fetch(apiUrl("/api/donations"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values)

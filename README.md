@@ -102,3 +102,18 @@ reporting a successful save.
 
 For deployments outside Vite's development/preview server, configure the web
 server or reverse proxy to forward `/api` requests to the Spring Boot service.
+Alternatively, set the frontend build variable `VITE_API_BASE_URL` to the
+backend's public base URL (without a trailing slash). The local Vite proxy is
+used when this variable is unset.
+
+## Deploy on Railway
+
+Create a Railway project from this GitHub repository and add a MySQL service.
+Deploy the Spring Boot service with the root directory set to `/backend`.
+Configure its
+`DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` variables with the connection
+details from the Railway MySQL service, and set `CORS_ALLOWED_ORIGINS` to the
+deployed frontend's exact origin. Once the backend has a public URL, set
+`VITE_API_BASE_URL` to that URL in the frontend's Vercel project and redeploy
+the frontend. Keep database credentials in Railway variables, never in source
+control.

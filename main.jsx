@@ -14,6 +14,7 @@ const LocatorPage = lazy(() => import("@/app/locator/page"));
 const NgoDashboardPage = lazy(() => import("@/app/dashboard/ngo/page"));
 const HungerRiskMapPage = lazy(() => import("@/app/risk-map/page"));
 const NutritionAdvisorPage = lazy(() => import("@/app/nutrition-advisor/page"));
+const AuthPage = lazy(() => import("@/app/auth-page"));
 const NotFound = lazy(() => import("@/app/not-found"));
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
             <Route path="/locator" element={<LocatorPage />} />
             <Route path="/dashboard/ngo" element={<NgoDashboardPage />} />
             <Route path="/risk-map" element={<HungerRiskMapPage />} />
+            <Route path="/signin" element={<AuthPage mode="signin" />} />
+            <Route path="/signup" element={<AuthPage mode="signup" />} />
             <Route
               path="/nutrition-advisor"
               element={<NutritionAdvisorPage />}
